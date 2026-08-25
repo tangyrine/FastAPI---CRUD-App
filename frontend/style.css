@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 60px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f0e8;
+    color: #111;
+}
+
+.container {
+    width: min(700px, 100%);
+    margin: 0 auto;
+    background: #ffffff;
+    border: 3px solid #111;
+    padding: 36px;
+    box-shadow: 8px 8px 0 #111;
+}
+
+h1 {
+    margin: 0 0 30px;
+    font-size: 42px;
+    letter-spacing: -1px;
+}
+
+.todo-form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+#todoInput {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 3px solid #111;
+    outline: none;
+}
+
+#todoInput:focus {
+    box-shadow: 4px 4px 0 #111;
+}
+
+button {
+    border: 3px solid #111;
+    background: #ffdf5d;
+    color: #111;
+    padding: 12px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #111;
+}
+
+button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #111;
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+#todoList {
+    margin: 0;
+    padding: 0;
+}
+
+#todoList li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
+    border-top: 2px solid #111;
+}
+
+#todoList li span {
+    flex: 1;
+    font-size: 17px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+#todoList li button {
+    padding: 8px 12px;
+    box-shadow: 3px 3px 0 #111;
+    background: #fff;
+}
+
+#todoList li button:first-of-type {
+    background: #9ee493;
+}
+
+#todoList li button:last-of-type {
+    background: #ff8b8b;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding: 24px;
+        box-shadow: 5px 5px 0 #111;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .todo-form {
+        flex-direction: column;
+    }
+
+    #todoList li {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #todoList li span {
+        width: 100%;
+        flex-basis: 100%;
+    }
+}
