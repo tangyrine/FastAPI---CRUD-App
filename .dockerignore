@@ -1,0 +1,9 @@
+# Ignore virtual environment and cache folders
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+.gitignore

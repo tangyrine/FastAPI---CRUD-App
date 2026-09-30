@@ -1,7 +1,7 @@
 services:
 
   db:
-    image: postgres:latest
+    image: postgres:16-alpine
     environment:
       POSTGRES_USER: todo_user
       POSTGRES_PASSWORD: todo_password
@@ -19,6 +19,7 @@ services:
       - "8000:8000"
     depends_on:
       - db
+    restart: always    # <--- This forces Docker to restart the backend if it crashes on startup
 
   frontend:
     build: ./frontend
